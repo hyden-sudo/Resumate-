@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -27,13 +28,17 @@ const Hero = () => {
           </p>
           
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center animate-slideUp" style={{ animationDelay: '0.6s' }}>
-            <Button size="lg" className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white">
-              Upload Your Resume
-            </Button>
-            <Button size="lg" variant="outline" className="group">
-              Learn How It Works
-              <ArrowDown className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
-            </Button>
+            <Link to="/resume-upload">
+              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white">
+                Upload Your Resume
+              </Button>
+            </Link>
+            <Link to="/features">
+              <Button size="lg" variant="outline" className="group">
+                Learn How It Works
+                <ArrowDown className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
+              </Button>
+            </Link>
           </div>
           
           <div className="mt-12 text-center animate-slideUp" style={{ animationDelay: '0.8s' }}>

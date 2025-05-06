@@ -16,16 +16,19 @@ const Navbar = () => {
           
           <div className="flex-1 flex justify-center">
             <ul className="hidden md:flex space-x-8">
-              <li><a href="#features" className="text-gray-600 hover:text-blue-600 transition-colors">Features</a></li>
-              <li><a href="#how-it-works" className="text-gray-600 hover:text-blue-600 transition-colors">How It Works</a></li>
-              <li><a href="#pricing" className="text-gray-600 hover:text-blue-600 transition-colors">Pricing</a></li>
-              <li><a href="#faq" className="text-gray-600 hover:text-blue-600 transition-colors">FAQ</a></li>
+              <li><Link to="/" className="text-gray-600 hover:text-blue-600 transition-colors">Home</Link></li>
+              <li><Link to="/features" className="text-gray-600 hover:text-blue-600 transition-colors">Features</Link></li>
+              <li><Link to="#" className="text-gray-600 hover:text-blue-600 transition-colors">How It Works</Link></li>
+              <li><Link to="#" className="text-gray-600 hover:text-blue-600 transition-colors">Pricing</Link></li>
+              <li><Link to="#" className="text-gray-600 hover:text-blue-600 transition-colors">FAQ</Link></li>
             </ul>
           </div>
           
           <div className="flex-1 flex justify-end space-x-2">
             <Button variant="outline" className="hidden md:block">Log In</Button>
-            <Button className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white">Get Started</Button>
+            <Link to="/resume-upload">
+              <Button className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white">Get Started</Button>
+            </Link>
           </div>
         </div>
       </div>

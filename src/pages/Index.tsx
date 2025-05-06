@@ -1,40 +1,16 @@
 
-import React, { useState } from 'react';
-import Navbar from '@/components/Navbar';
-import Hero from '@/components/Hero';
-import Features from '@/components/Features';
-import ResumeUploader from '@/components/ResumeUploader';
-import AnalysisResults from '@/components/AnalysisResults';
-import AiChat from '@/components/AiChat';
-import Footer from '@/components/Footer';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Index = () => {
-  const [analysisResults, setAnalysisResults] = useState<any>(null);
-  const [showResults, setShowResults] = useState<boolean>(false);
-  
-  const handleAnalysisComplete = (results: any) => {
-    setAnalysisResults(results);
-    setShowResults(true);
-    
-    // Scroll to results after a short delay
-    setTimeout(() => {
-      document.getElementById('results')?.scrollIntoView({ behavior: 'smooth' });
-    }, 100);
-  };
+  const navigate = useNavigate();
 
-  return (
-    <div className="min-h-screen">
-      <Navbar />
-      <Hero />
-      <Features />
-      <ResumeUploader onAnalysisComplete={handleAnalysisComplete} />
-      <div id="results">
-        <AnalysisResults results={analysisResults} isVisible={showResults} />
-        <AiChat resumeResults={analysisResults} isVisible={showResults} />
-      </div>
-      <Footer />
-    </div>
-  );
+  useEffect(() => {
+    // Redirect to the home page component
+    navigate('/');
+  }, [navigate]);
+
+  return null; // This component won't render anything as it immediately redirects
 };
 
 export default Index;
