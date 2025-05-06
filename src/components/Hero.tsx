@@ -44,10 +44,10 @@ const Hero = () => {
           <div className="mt-12 text-center animate-slideUp" style={{ animationDelay: '0.8s' }}>
             <p className="text-sm text-gray-500 mb-3">Trusted by professionals from</p>
             <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 opacity-70">
-              <img src="https://placeholder.com/100x30" alt="Company 1" className="h-6" />
-              <img src="https://placeholder.com/100x30" alt="Company 2" className="h-6" />
-              <img src="https://placeholder.com/100x30" alt="Company 3" className="h-6" />
-              <img src="https://placeholder.com/100x30" alt="Company 4" className="h-6" />
+              <div className="h-6 text-gray-500 flex items-center font-medium">Microsoft</div>
+              <div className="h-6 text-gray-500 flex items-center font-medium">Google</div>
+              <div className="h-6 text-gray-500 flex items-center font-medium">Amazon</div>
+              <div className="h-6 text-gray-500 flex items-center font-medium">Meta</div>
             </div>
           </div>
         </div>
